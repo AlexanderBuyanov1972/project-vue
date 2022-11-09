@@ -6,7 +6,7 @@
       <div><strong>title :</strong> {{ post.title }}</div>
       <div><strong>body :</strong> {{ post.body }}</div>
     </div>
-    <div class="post_btn">
+    <div class="post_btns">
       <my-button class="btn" @click="removePost">Delete</my-button>
       <my-button class="btn" @click="openPost">Open</my-button>
     </div>
@@ -40,6 +40,11 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.post_btns {
+  min-width: 13%;
+  display: flex;
+  justify-content: space-around;
 }
 
 .btn {

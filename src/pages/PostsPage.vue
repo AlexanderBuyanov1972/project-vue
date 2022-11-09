@@ -4,7 +4,7 @@
     <my-input v-focus placeholder="search..." v-model="searchQuery" />
     <div class="app_btns">
       <my-button @click="showDialog">Create post</my-button>
-      <my-select v-model="selectedSort" :options="sortOptions" />
+      <my-select v-model="selectedSort" :options="options" />
     </div>
     <my-dialog v-model:show="dialogVisiable">
       <post-form @create_post="createPost" />
@@ -57,7 +57,7 @@ export default {
       current_page: 1,
       limit: 10,
       totalPages: 0,
-      sortOptions: [
+      options: [
         { value: "id", name: "По id" },
         { value: "userId", name: "По user id" },
         { value: "title", name: "По названию" },
